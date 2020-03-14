@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_images_slider/flutter_images_slider.dart';
 //import 'package:golden_shoes/util/categories.dart';
-import 'package:golden_shoes/components/products_list_comp.dart';
+import 'package:golden_shoes/components/products_intro_comp.dart';
 import 'package:golden_shoes/util/categories.dart';
 //import 'package:golden_shoes/widgets/category_box.dart';
 //import 'package:golden_shoes/widgets/category_intro.dart';
@@ -57,25 +57,15 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             Expanded(
-              child: ListView(
-                children: <Widget>[
-                  Text(
-                    "Recents",
-                    style: TextStyle(
-                        fontFamily: 'pacifico',
-                        //fontFamily: 'Source Sand Pro',
-                        fontSize: 40,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                  ProductsListComponent(
-                    isHome: true,
-                    category: categories.AllProducts,
-                  ),
-                ],
+              child: ProductsIntroComponent(
+                category: categories.AllProducts,
+                isHome: false,
+              ),
+            ),
+            Expanded(
+              child: ProductsIntroComponent(
+                category: categories.AllProducts,
+                isHome: false,
               ),
             ),
           ],

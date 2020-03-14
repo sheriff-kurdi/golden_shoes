@@ -19,7 +19,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         child: ListView(
           children: <Widget>[
             SizedBox(
-              height: 70.0,
+              height: 50.0,
             ),
             CategoryIntro(
               category: ProductsScreen.classic,

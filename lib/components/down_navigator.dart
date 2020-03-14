@@ -1,17 +1,12 @@
 import 'package:golden_shoes/screens/categories_screen.dart';
 import 'package:golden_shoes/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:golden_shoes/util/categories.dart';
-//import 'package:golden_shoes/screens/products_screen.dart';
-import 'package:golden_shoes/components/products_list_comp.dart';
 
 /// This Widget is the main application widget.
 class DownNavigator extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return  MyStatefulWidget();
-   
+    return MyStatefulWidget();
   }
 }
 
@@ -29,10 +24,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static final List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     CategoriesScreen(),
-    ProductsListComponent(
-      isHome: false,
-      category: categories.SimiClassic,
-    ),
+    Center(
+        child: Text(
+      "About",
+      style: TextStyle(
+        fontFamily: 'Source Sand Pro',
+        //fontFamily: 'Source Sand Pro',
+        fontSize: 60,
+        color: Colors.grey,
+      ),
+    )),
   ];
 
   void _onItemTapped(int index) {
@@ -60,10 +61,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             title: Text('Classic'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            title: Text('Classic'),
+            icon: Icon(Icons.question_answer),
+            title: Text('About'),
           ),
-         
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.white70,

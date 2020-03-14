@@ -25,16 +25,16 @@ class CategoryIntro extends StatelessWidget {
           boxShadow: [
             BoxShadow(
                      color: Color.fromRGBO(0, 0, 0, 0.09),
-                  offset: Offset(2.9, 2.8),
+                  offset: Offset(1.9, 1.0),
                   blurRadius: 0.1,
                   spreadRadius: 0.5,
                 )
               ],
             border: Border.all(color: Color(0xff86c01f)),
             color: Color(0xff86c01f),
-            borderRadius: BorderRadius.all(Radius.circular(40))),
+            borderRadius: BorderRadius.all(Radius.circular(20))),
         width: double.infinity,
-        height: 80,
+        height: 90,
         child: Row(
           children: <Widget>[
             CircleAvatar(
@@ -48,7 +48,7 @@ class CategoryIntro extends StatelessWidget {
             Text(
               text,
               style: TextStyle(
-                fontFamily: 'pacifico',
+                fontFamily: 'Great Answer',
                 //fontFamily: 'Source Sand Pro',
                   fontSize: 30,
                   color: Colors.white,
